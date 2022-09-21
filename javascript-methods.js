@@ -88,8 +88,8 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 // KEYS //
 Object.myKeys = function(object) {
 	this.keys = [];
-	for (const item in object)
-		this.keys.push(item);
+	for (const key in object)
+		this.keys.push(key);
 	
 	return this.keys;
 };
@@ -97,7 +97,7 @@ Object.myKeys = function(object) {
 // VALUES //
 Object.myValues = function(object) {
 	this.values = [];
-	for (const item in object)
-		this.values.push(object[item])
+	for (const key in object)
+		this.values.push(object[key])
 	return this.values;
 };
