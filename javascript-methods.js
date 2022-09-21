@@ -44,8 +44,22 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+	try 
+	{
+		null.callbackFn(); //Check for empty array and empty values
+	} 
+	catch (e)
+	{
+		console.log(`${e.name}: "${e.message}"`);
+	}
+
+	let final_result = null;
+	for (let i = 0; i < this.length ; i++)
+		final_result = callbackFn(final_result, this[i], i, this)
+
+	return final_result;
 };
+
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
